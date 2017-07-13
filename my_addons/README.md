@@ -1,0 +1,1 @@
+# This modules were created during my exploration of the Book Odoo Development Essentials
