@@ -19,20 +19,18 @@
 					<field name="color" />
 					<field name="name" />
 					<templates>
+						
 						<t t-name="follower_avatars">
 							<div>
-								<t t-name="follower_avatars">
-									<div>
-										<t t-foreach="record.message_follower_ids.raw_value.slice(
-											0, arg_max)" t-as="rec">
-											<img t-att-src="kanban_image(
-												'res.partner', 'image_small', rec)"
-												class="oe_kanban_image oe_kanban_avatar_smallbox"/>
-										</t>
-									</div>
+								<t t-foreach="record.message_follower_ids.raw_value.slice(
+									0, arg_max)" t-as="rec">
+									<img t-att-src="kanban_image(
+										'res.partner', 'image_small', rec)"
+										class="oe_kanban_image oe_kanban_avatar_smallbox"/>
 								</t>
 							</div>
 						</t>
+						
 						<t t-name="kanban-box">
 							<div t-attf-class="oe_kanban_card
 								#{kanban_color(record.color.raw_value)}">
